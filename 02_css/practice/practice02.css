@@ -1,0 +1,28 @@
+.box{
+    width: auto;
+    height: 200px;
+    background-color: orange;
+}
+
+.box span{
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    font-size: 20px;
+}
+
+.box > span:first-child{
+    background-color: skyblue;
+}
+
+.box > span:nth-child(2){
+    background-color: green;
+}
+
+.box > span:last-child{
+    background-color: red;
+}
+
+.box > span:not(:last-child){
+    margin-right: 30px;
+}

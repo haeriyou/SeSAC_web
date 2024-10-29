@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=IBM+Plex+Sans+KR&display=swap');
+@font-face {
+    font-family: 'FlightSans-Title';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/FlightSans-Title.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTBookendBatangR';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-2@1.0/TTBookendBatangR.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* body{
+    font-family: 'TTBookendBatangR';
+} */
+
+.font-link{
+    font-family: "Dongle", sans-serif;
+}
+
+.font-import{
+    font-family: "Dongle", sans-serif;
+}
+
+.noonnu_font{
+    font-family: 'FlightSans-Title', serif;
+}
+
+.container{
+    background-color: sandybrown;
+    /* 글자 색은 기본적으로 상속(cascading) */
+    color: rgb(191, 255, 198);
+}
+
+.container > .sentences{
+    /* font-weight: 글씨 굵기 */
+    font-weight: 700;
+
+    /* font-size: 글씨 크기 (default 16px) */
+    /* 1rem, 1em */
+    font-size: 16px;
+
+    /* text-align: 정렬 */
+    text-align: center;
+
+    /* text-decoration: 문자 꾸미기 속성 */
+    /* text-decoration: underline; */
+
+    /* line-height: 줄간 간격 */
+    line-height: 1.4;
+
+}
+
+.test{
+    background-color: tomato;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    /* 글이 한 줄 일때는 세로 기준 가운데 정렬로 사용한다. */
+    line-height: 100px;
+}
+
+.container a{
+    color:gray;
+    text-decoration: none;
+    /* 색상 지정 방법 
+    1. 색상 이름으로 설정: red, skyblue, orange, etc.
+    2. rgb(0, 0, 0)
+        - 0~255 중 하나의 숫자가 들어감
+        - rgba(): a는 투명도 지정
+    3. #000000: 
+        rgb(0,0,0): black : #000000
+        rgb(255,255,255): white : #ffffff
+        - 0~9와 a,b,c,d,e,f로 이루어진 수
+    */
+}

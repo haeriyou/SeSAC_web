@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 종합실습</title>
+    <style>
+        body{
+            width: 500px;
+            height: auto;
+        }
+
+        h1:hover{
+            background-color: black;
+            color: white;
+        }
+
+        textarea:hover{
+            background-color: rgba(251, 194, 194, 0.304);
+        }
+
+        #red:checked + label{
+            background-color: red;
+            color: white;
+        }
+
+        #blue:checked + label {
+            background-color: blue;
+            color: white;
+        }
+
+        #yellow:checked + label {
+            background-color: yellow;
+            color: black;
+        }
+
+        #submit_id{
+            float: right;
+            background-color: rgb(248, 46, 80);
+            color: white;
+        }
+        #submit_id:active {
+            background-color: gray;
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>건의 사항을 적어주세요!</h1>
+<textarea cols="70" rows="15" placeholder="건의 사항 🎈"> </textarea>
+<br />
+    <input type="checkbox" name="color" id="red" /> 
+        <label for="red">빨강</label>
+    <input type="checkbox" name="color" id="blue" />
+        <label for="blue"> 파랑</label>
+    <input type="checkbox" name="color" id="yellow" /> 
+        <label for="yellow">노랑</label>
+<input type="submit" id="submit_id" />
+
+</body>
+</html>

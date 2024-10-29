@@ -1,0 +1,40 @@
+.display_block{
+    display: block;
+    background-color: antiquewhite;
+    border: 1px solid yellowgreen;
+    width: 100px;
+    height: 100px;
+
+    /* 여백 적용, padding은 내부 여백, margin은 외부 여백 */
+    padding: 10px;
+    margin: 10px;
+}
+
+.d_inline{
+    display: inline;
+    background-color: skyblue;
+    border: 1px solid brown;
+
+    /* inline은 가로, 세로 적용이 안된다 */
+    width: 100px;
+    height: 100px;
+
+    /* 여백 적용 */
+    /* padding 위아래 배경색만 적용 */
+    padding: 10px;
+    margin: 10px;
+}
+
+.display_inline_block{
+    display: inline-block;
+    background-color: mediumpurple;
+    border: 1px solid blue;
+
+    width: 50px;
+    height: 50px;
+    font-size: 12px;
+
+    /* 여백 적용 */
+    padding: 10px;
+    margin: 10px;
+}
