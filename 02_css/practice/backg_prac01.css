@@ -1,0 +1,30 @@
+.circle {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    position: absolute;
+} 
+
+.gradient{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    position: relative;
+    background: linear-gradient(70deg,#FFE600, #FF0080, #DB20DB);
+}
+
+.picture{
+    background-image: url('../img/fubao.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px 500px;
+    border: 8px solid white;
+    width: 370px;
+    height: 370px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

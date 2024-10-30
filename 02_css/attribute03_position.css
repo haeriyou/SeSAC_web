@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 2000px;
+    background: linear-gradient(white, orange);
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 100px;
+}
+
+.position-static{
+    background-color: aqua;
+    /* position static이 default 값 */
+    /* static은 이동 불가 = top, bottom, left, right 속성의 영향을 받지 않음 */
+    position: static;
+}
+.position-relative{
+    background-color: pink;
+    /* position relative의 기준은 자기 자신 */
+    /* 자신의 자리는 남아 있음 = 문서의 흐름을 해치지 않음 */
+    position: relative;
+    left: 100px;
+    /* top: 50px; */
+}
+.position-absolute{
+    background-color: yellowgreen;
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    /* 보통 relative가 absolute의 부모가 된다 */
+}
+.position-fixed{
+    background-color: goldenrod;
+    position: fixed;
+    top: 100px;
+    right: 200px;
+    /* 무조건 viewport 기준 */
+}
+
+.absolute2{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 10px;
+    background-color: rgb(87, 87, 255);
+    top: 0;
+    bottom: 0;
+}
+
+/* z-index는 포지션과 같이 서야한다.
+absolute는 display: block을 포함 */
+/* absolute는 부모 위치를 기준으로 한다 */
+
+.parent{
+    position: relative;
+    width: 300px;
+    border: 3px dotted dodgerblue;
+}
+
+.parent > .circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.circle1{
+    background-color: #9afaff;
+    left: 200px;
+}
+.circle2{
+    background-color: #84ff8d;
+    left: 150px;
+}
+.circle3{
+    background-color: #ffeb88;
+    left: 100px;
+    z-index: 10;
+}
+.circle4{
+    background-color: #ffb680;
+    left: 50px;
+    z-index: 5;
+}
+.circle5{
+    background-color: #ff7c7c;
+}
