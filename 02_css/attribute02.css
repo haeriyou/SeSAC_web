@@ -38,3 +38,133 @@
     padding: 10px;
     margin: 10px;
 }
+
+.parent{
+    width: 300px;
+    height: 250px;
+    background-color: red;
+}
+
+.parent > .min{
+    min-width: 400px;
+    background-color: aquamarine;
+    height: 100px;
+}
+
+.parent > .max{
+    max-width: 400px;
+    height: 100px;
+    background-color: blueviolet;
+}
+
+/* 단위 확인 */
+.box{
+    background-color: beige;
+    border: 1px solid black;
+}
+
+.box-px{
+    width: 50px;
+    height: 50px;
+}
+
+.box-view{
+    width: 50vw;
+    height: 50vh;
+}
+
+.box-per{
+    width: 50%;
+    height: 50%;
+}
+
+html{
+    font-size: 20px;
+}
+
+/* html의 폰트 사이즈가 1rem */
+.rem{
+    font-size: 2rem;
+}
+
+/* 부모의 폰트 사이즈가 1em */
+.em{
+    font-size: 2em;
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+    border: 1px solid gray;
+    display: inline-block;
+    
+    /* 클릭 형식으로 커서를 바꿈 */
+    cursor: pointer; 
+}
+
+.border{
+    /* width, style, color */
+    border: 1px solid black;
+    border-color: blue;
+    border-style: dotted;
+    border-width: 5px;
+
+    border-left: 2px dashed rgb(10, 187, 81);
+    border-top-style: solid;
+}
+
+.rounded{
+    border-radius: 10%;
+    /* 단축 속성 */
+    border-radius: 5px 10px 20px 40px;
+    border-radius: 5px 20px 50px;
+    border-radius: 5px 50px;   
+}
+
+.box-sizing{
+    border: 15px solid red;
+    padding: 30px;
+    background-color: yellow;
+}
+
+.content-box{
+    box-sizing: content-box;
+}
+
+.border-box{
+    box-sizing: border-box;
+}
+
+.d-none {
+    /* display: none; */
+    background-color: red;
+  }
+  .invisible {
+    /* visibility: hidden; */
+    background-color: orangered;
+  }
+  
+  .opacity-0 {
+    /* opacity: 0; */
+    background-color: tomato;
+  }
+
+  .square > img[alt='pooh 사진']{
+    width: 200px;
+  }
+
+  .overflow-hidden{
+    overflow: hidden;
+  }
+  .overflow-auto{
+    overflow: auto;
+  }
+  .overflow-scroll{
+    overflow: scroll;
+  }
+  .overflow-visible{
+    overflow: visible;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+    overflow: hidden auto;
+  }
