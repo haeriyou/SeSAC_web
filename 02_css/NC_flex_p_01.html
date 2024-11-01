@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            background-color: rgb(197, 197, 255);
+        }
+        .item1{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+
+        }
+        .item2{
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+
+        }
+        .item3{
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+
+        }
+
+        .container2{
+            width: 500px;
+            height: 500px;
+            display: flex;
+            flex-wrap: wraps;
+        }
+
+        .container3{
+            width: 500px;
+            height: 500px;
+            background-color: wheat;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-end;
+            flex-direction: row;
+        }
+
+        .container3 > .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .container3 > .box.item3_1{
+            background-color: red;
+        }
+        .container3 > .box.item3_2{
+            background-color: orange;
+        }
+        .container3 > .box.item3_3{
+            background-color: yellow;
+        }
+        .container3 > .box.item3_4{
+            background-color: yellowgreen;
+        }
+        .container3 > .box.item3_5{
+            background-color: green;
+        }
+        .container3 > .box.item3_6{
+            background-color: skyblue;
+        }
+        .container3 > .box.item3_7{
+            background-color: blue;
+        }
+        .container3 > .box.item3_8{
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+    </div>
+
+<br/>
+<br/>
+
+    <div class="container2">
+        <div class="item2_1"></div>
+        <div class="item2_2"></div>
+        <div class="item2_3"></div>
+        <div class="item2_4"></div>
+        <div class="item2_5"></div>
+        <div class="item2_6"></div>
+        <div class="item2_7"></div>
+        <div class="item2_8"></div>
+    </div>
+
+    <br/>
+    <div class="container3">
+        <div class="box item3_1"></div>
+        <div class="box item3_2"></div>
+        <div class="box item3_3"></div>
+        <div class="box item3_4"></div>
+        <div class="box item3_5"></div>
+        <div class="box item3_6"></div>
+        <div class="box item3_7"></div>
+        <div class="box item3_8"></div>
+    </div>
+</body>
+</html>
