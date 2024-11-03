@@ -1,0 +1,36 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: lightblue;
+    position: relative;
+}
+
+.round{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    background: linear-gradient(200deg,rgb(255, 119, 0),orange, yellow);
+    animation: circle 8s linear infinite;
+}
+
+@keyframes circle {
+
+    from, to{
+        top: 0;
+        left: 0;
+    }
+    25%{
+        top: 0;
+        left: 93vw;}
+
+    50%{
+        top: 93vh;
+        left: 93vw;}
+
+    75%{
+        top: 93vh;
+        left: 0;
+    }
+    
+}

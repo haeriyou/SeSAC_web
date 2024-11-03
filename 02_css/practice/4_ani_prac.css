@@ -1,0 +1,19 @@
+.container{
+    width: auto;
+    position: relative;
+}
+
+.text {
+    position: absolute;
+    animation: textMove 5s ease-in-out infinite;
+}
+
+@keyframes textMove {
+ from{
+    left: 1000px;
+ }   
+
+ to{
+    left: 0px;
+ }
+}

@@ -1,0 +1,42 @@
+.container{
+    position: relative;
+    background-color: lightgray;
+}
+
+.container > .img{
+    position: absolute;
+    width: 25%;
+    transform: skewY(45deg);
+    cursor: pointer;
+    transition: 1s ease;
+    top: 250px;
+}
+
+.img_01{
+    left: 20%;
+    z-index: 5;
+}
+
+.img_01:hover{
+    transform: perspective(500px) rotateY(0deg);
+    z-index: 5;
+}
+
+.img_02{
+    left: 30%;
+    z-index: 4;
+}
+
+.img_02:hover{
+    transform: perspective(500px) rotateY(0deg);
+    z-index: 5;
+}
+
+.img_03{
+    left: 45%;
+}
+
+.img_03:hover{
+    transform: perspective(500px) rotateY(0deg);
+    z-index: 5;
+}

@@ -69,10 +69,10 @@
 
 .box2:hover{
     background-color: paleturquoise;
-    transform: translateX(100px) scaleX(2);
+    transform: scaleX(2);
 
     /* transition: property duration timing-function delay */
-    transition: transform 1s ease-in-out 2s;
+    transition: transform 0.5s ease-in-out 2s;
 }
 
 .box3{

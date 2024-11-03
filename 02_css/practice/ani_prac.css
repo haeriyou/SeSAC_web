@@ -1,0 +1,28 @@
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.box_1:hover{
+    width: 250px;
+    transform: 1s ease;
+}
+
+.box_2:hover{
+    transform: translateX(50px) skewX(-45deg);
+}
+
+.box_3:hover{
+    background-color: red;
+    border-radius: 50%;
+    transform: translateX(150px) rotate(180deg);
+}
+
+.box_4:hover{
+    background-color: yellow;
+    transform: scale(2) rotateY(540deg);
+}
