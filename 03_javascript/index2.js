@@ -68,7 +68,7 @@ let korean=[["가", "갸", "거", "겨"],
             ["다", "댜", "더", "뎌"]]
 console.log(korean [2] [0])
 
-// 퀴즈) 아래 배열에서 아이스크림 출력하기
+// 아래 배열에서 아이스크림 출력하기
 const letters = [
 	["사", "스", "자", "크"],
 	["진", "안", "리", "이"],
@@ -78,6 +78,7 @@ const letters = [
 
 console.log(letters [3] [0], letters [1] [3], letters [0] [1], letters [0] [3], letters [2] [2])
 
+// 8 출력
 const nums = [
 	[
 		[1, 2, 3],
