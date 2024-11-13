@@ -122,7 +122,7 @@ let alphabets=['a','b','c','d','e','f']
 // 기본 for문
 for(let i=0; i<arr3.length;i++){
     console.log(arr3[i])
-}
+} // arr3 나열
 
 // for of문
 for(let el of arr3){

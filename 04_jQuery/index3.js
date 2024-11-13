@@ -1,0 +1,93 @@
+console.log(window)
+console.log(document)
+
+console.log($(window))
+console.log($(document))
+
+// click(): 클릭했을 때
+// jQuery에서는 이벤트 이름으로 메서드가 존재함
+// 요소.click(function(){}), 요소.hover(function(){}, function(){}) << hover의 경우 function이 두개이다.
+$('.p-msg').click(function(){
+    $('.p-msg').css('color','red')
+})
+
+/* $('.num').click(function(){
+    $('.num').css('color', 'blue')
+    // $(this).css('color', 'green') //  자기 자신을 가리킴 (하나씩 색상 변경)
+}) */
+
+/* $('.num').on('click',function(){
+    $(this).css('color','pink')
+}) */
+
+// in JS (19~21 라인까지의 동작과 동일)
+let nums = document.querySelectorAll('.num') // 노드리스트로 불려와서 바로 addEventListener를 사용할 수 없다
+for(let i=0; i<nums.length; i++){
+    console.log(nums[i]) // nums의 i번째
+    nums[i].addEventListener('click',function(){
+        this.style.color = 'blue'
+    })
+}
+
+// hover(): 마우스를 올렸을 때, 마우스를 떼었을 때 정의
+$('.div-hover').hover(function(){
+        $(this).addClass('hover')
+    },
+    function(){
+        $(this).removeClass('hover')
+    }
+)
+
+$(window).scroll(function(){
+    console.log('scrolling....')
+})
+
+$('.input-key').keydown(function(e){
+    if(e.code==="ArrowLeft"){
+        console.log('왼쪽 방향키 눌렸습니다.')
+           } else if(e.code==="ArrowRight"){
+               console.log('오른쪽 방향키 눌렸습니다.')
+           } else if(e.code==="ArrowUp"){
+               console.log('위쪽 방향키 눌렸습니다.')
+           }else if(e.code==="ArrowDown"){
+               console.log('아래쪽 방향키 눌렸습니다.')
+           } else{
+               console.log('방향키가 아닌 키가 눌렸습니다.')
+           }
+})
+
+/*
+input.addEventListener('keydown', function(event){
+    // console.log(event)
+    
+    // 방향키 아래, 위, 왼쪽, 오른쪽
+    // console.log(event.code)
+    // console.log(event.key)
+    // console.log(event.keyCode)
+    if(event.code==="ArrowLeft"){
+         console.log('왼쪽 방향키 눌렸습니다.')
+            } else if(event.code==="ArrowRight"){
+                console.log('오른쪽 방향키 눌렸습니다.')
+            } else if(event.code==="ArrowUp"){
+                console.log('위쪽 방향키 눌렸습니다.')
+            }else if(event.code==="ArrowDown"){
+                console.log('아래쪽 방향키 눌렸습니다.')
+            } else{
+                console.log('방향키가 아닌 키가 눌렸습니다.')
+            }
+})
+*/
+
+$('#todo-form').submit(function(e){
+    // 기본동작 막기 (새로고침 방지)
+    e.preventDafault()
+    
+    // input 태그에 작성한 글자 가져오기
+    const inputValue = $('input[name="todo"]').val()
+    
+    // li 태그를 만듦과 동시에 form아래의 ul태그에 붙여넣기
+    $('.todos').append(`<li>${inputValue}</li>`) // ``백틱 내부의 ${}로 인해 변수로 인식하게 된다
+    
+    // input 초기화
+    $('input[name="todo"]').val('')
+})
