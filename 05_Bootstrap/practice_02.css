@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Paperlogy-8ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+ul, ol{
+    list-style: none;
+}
+*{
+    font-family: 'Paperlogy-8ExtraBold';
+    font-size: 15pt;
+}
+header{
+    width: auto;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px dotted gainsboro;
+}
+
+#record, #inputDate{
+    font-family: 'Paperlogy-8ExtraBold';
+}
