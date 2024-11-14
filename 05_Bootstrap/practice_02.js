@@ -26,11 +26,11 @@ checkboxes.forEach(checkbox => {
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-    
+
      // 날짜와 내용이 모두 입력되었는지 확인
      if (date.value.trim() === '' || content.value.trim() === '') {
         alert('날짜와 내용을 모두 입력해주세요!');
-        return; // 함수 실행 중단
+        return; 
     }
     const checkedIcons = getCheckedIcons();
     const li = document.createElement('li');

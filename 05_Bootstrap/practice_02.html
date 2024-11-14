@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap 사용 연습하기 (1)</title>
+    <title>Bootstrap 사용 연습하기 (2)</title>
     <link rel="stylesheet" href="./practice_02.css">
     <script defer src="./practice_02.js"></script>
      <!-- Bootstrap CDN -->
@@ -15,9 +15,11 @@
         <h1> 🥗🥙식단/운동 기록표👟🎽</h1>   
     </header>
     <form>
-        <input type="date" id="inputDate">
-        <input type="text" id="inputContent">
-        <button type="submit" class="btn btn-light" id="record">기록!</button>
+        <div class="inputs">
+            <input type="date" id="inputDate">
+            <input type="text" id="inputContent">
+            <button type="submit" class="btn btn-light" id="record">기록!</button>
+        </div>
         
         <!-- 아이콘 목록 -->
         <div class="icon">
@@ -25,14 +27,17 @@
             <label class="form-check-label" for="breakast">
                 🍎
             </label>
+            <br>
             <input class="form-check-input" type="checkbox" id="lunch" onclick="getCheckedIcons(event)">
             <label class="form-check-label" for="lunch">
                 🍞
             </label>
+            <br>
             <input class="form-check-input" type="checkbox" id="dinner" onclick="getCheckedIcons(event)">
             <label class="form-check-label" for="dinner">
                 🍗
             </label>
+            <br>
             <input class="form-check-input" type="checkbox" id="workout" onclick="getCheckedIcons(event)">
             <label class="form-check-label" for="workout">
                 👟

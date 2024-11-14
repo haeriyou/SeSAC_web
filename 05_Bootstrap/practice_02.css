@@ -11,6 +11,7 @@ ul, ol{
 *{
     font-family: 'Paperlogy-8ExtraBold';
     font-size: 15pt;
+    
 }
 header{
     width: auto;
@@ -19,9 +20,35 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px dotted gainsboro;
+    border-bottom: 1px dashed gainsboro;
+}
+
+form{
+    margin: 0 10px;
+}
+
+.icon{
+    width: 100px;
+    margin: 0 20px;
+    padding: 0 20px;
+    border: 1px dashed gainsboro;
+    border-radius: 5px;
 }
 
 #record, #inputDate{
     font-family: 'Paperlogy-8ExtraBold';
+}
+
+.inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#inputDate, #inputContent, #record{
+    margin: 0 5px;
+}
+
+.recordList{
+    border: 1px dashed gainsboro;
 }
