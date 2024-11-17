@@ -149,3 +149,65 @@ function addNumber(...rest){
 
 let sumResult = addNumber(1,2,3,4,5)
 console.log('합한 결과 값: ',sumResult) // 15
+
+console.log('실습 Shape class 만들기')
+
+class Shape{
+    constructor(width, height){
+        this.width = width
+        this.height = height
+    }
+
+    getArea(){
+        return this.width *this.height;
+    }
+}
+let rec1=new Shape(3,4);
+console.log(rec1.getArea());
+
+class Rectangel extends Shape{
+
+    constructor(width, height){
+        super (width, height)
+    }
+    
+    getArea(){
+        return this.width * this.height
+    }
+
+    getSqrt(){
+        return Math.sqrt(this.width**2)+(this.height**2)
+    }
+}
+let sq=new Rectangel(3,4);
+console.log(sq.getArea());
+console.log(sq.getSqrt());
+
+class Triangle extends Shape{
+
+    constructor(width, height){
+        super(width, height)
+    }
+
+    getArea(){
+        return this.width * this.height /2
+    }
+}
+
+let tri = new Triangle(4,4);
+console.log(tri.getArea());
+
+class Circle extends Shape{
+
+    constructor(width, height, radius){
+        super(width, height)
+        this.radius = radius
+    }
+
+    getArea(){
+       return Math.floor(Math.PI*(this.radius**2))
+    }
+}
+
+let cir = new Circle(5,5,3);
+console.log(cir.getArea());
