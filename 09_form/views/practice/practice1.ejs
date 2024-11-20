@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습문제1</title>
+    <style>
+      label {
+        display: block;
+        margin: 0 10px;
+        padding: 10px;
+      }
+      button {
+        display: block;
+        margin: 0 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>실습문제1: GET으로 정보 받기</h1>
+    <form
+      action="/practice_result"
+      method="get"
+      onsubmit="return checkForm(this)"
+    >
+      <label> 이름 <input type="text" id="name" name="name" /> </label>
+      <br />
+      <label
+        >성별
+        <br />
+        <input type="radio" name="gender" id="male" /> 남자
+        <input type="radio" name="gender" id="female" /> 여자
+      </label>
+      <br />
+      <label
+        >생년월일
+        <br />
+        <select name="date" id="year">
+          <% for(let i=1990; i<=2024; i++){ %>
+          <option value="select"><%=i %></option>
+          <% } %>
+        </select>
+        년
+        <select name="date" id="month">
+          <% for(let i=1; i<=12; i++){ %>
+          <option value="select"><%=i %></option>
+          <% } %>
+        </select>
+        월
+        <select name="date" id="day">
+          <% for(let i=1; i<=31; i++){ %>
+          <option value="select"><%=i %></option>
+          <% } %>
+        </select>
+        일
+      </label>
+      <br />
+      관심사
+      <br />
+      <label>
+        <input type="checkbox" name="interest" id="travel" /> 여행
+      </label>
+      <label for="fashion">
+        <input type="checkbox" name="interest" id="fashion" /> 패션
+      </label>
+
+      <label> <input type="checkbox" name="interest" id="food" /> 음식 </label>
+      <br />
+      <button>회원가입</button>
+    </form>
+    <script>
+      function checkForm(form) {
+        if (form.name.value.trim() === "") {
+          alert("이름을 입력 해 주세요");
+          return false;
+        }
+
+        if (
+          form.interest[0].checked === false &&
+          form.interest[1].checked === false &&
+          form.interest[2].checked === false
+        ) {
+          alert("관심사를 선택 해 주세요");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
