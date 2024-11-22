@@ -63,17 +63,21 @@ app.get("/practice2", (req, res) => {
   res.render("practice/practice2");
 });
 
-// 3. 주소 지정 form GET요청
+// 3. /practice1-get form GET요청
 app.get("/practice_result", (req, res) => {
   console.log(req.query); // interest, date
   res.render("practice/practice_result", {
     userData: req.query,
+    addInfo: false,
   });
 });
 
 // 4. 주소 지정 form POST요청
-app.post("/practice_result", (req, res) => {
-  res.render("practice/practice_result", {});
+app.post("/practice2", (req, res) => {
+  res.render("practice/practice_result", {
+    userData: req.body,
+    addInfo: true,
+  });
 });
 
 // API 4개 작업해야 함

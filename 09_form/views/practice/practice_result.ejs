@@ -16,7 +16,26 @@
   <body>
     <h1>결과 확인하기</h1>
     <p><span><%=userData.name %></span>님 환영합니다!</p>
+    <ul>
+      <li>성별: <%=userData.gender %></li>
+      <li>
+        생년월일: <%=userData.year %>/<%=userData.month %>/<%=userData.day %>
+      </li>
+      <li>관심사: <%=userData.favorite %></li>
+    </ul>
+    <% if(addInfo) {%>
+    <p>좋아하는 색: <span class="color"><%=userData.color %></span></p>
+    <p>좋아하는 숫자: <%=userData.number %></p>
+    <p>다짐 한 마디: <%=userData.comment %></p>
+    <% } %>
     <br />
     <a href="/">홈으로 이동하기</a>
+    <script>
+      // 색상 apply
+      document.addEventListener("DOMContentLoaded", function () {
+        const colorSpan = document.querySelector(".color");
+        colorSpan.style.color = "<%=userData.color%>";
+      });
+    </script>
   </body>
 </html>
