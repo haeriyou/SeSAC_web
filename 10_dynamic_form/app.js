@@ -39,7 +39,7 @@ app.get("/axios", (req, res) => {
 // /axios POST
 app.post("/axios", (req, res) => {
   console.log(req.body);
-  res.send("응답완료");
+  res.send(req.body);
 });
 
 /** fetch 요청 */
