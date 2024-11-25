@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 1</title>
+
+    <!-- axios CDN -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <h1>실습1</h1>
+    <form name="information">
+      <label> 이름 <input type="text" id="name" name="name" /> </label>
+      <br />
+      <fieldset>
+        <legend>성별</legend>
+        <label>
+          <input type="radio" name="gender" value="male" />
+          <span>남성</span>
+        </label>
+        <label>
+          <input type="radio" name="gender" value="female" />
+          <span>여성</span>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>생년월일</legend>
+        <select name="year">
+          <% for (let i = 1990; i<=2024; i++){%>
+          <option value="<%=i%>"><%=i%></option>
+          <% } %>
+        </select>
+        <span>년</span>
+
+        <select name="month">
+          <% for (let i =1; i<=12; i++){ %>
+          <option value="<%=i%>"><%=i%></option>
+          <% } %>
+        </select>
+        <span>월</span>
+
+        <select name="day">
+          <% for(let i=1; i <=31;i++){ %>
+          <option value="<%=i%>"><%=i%></option>
+          <% } %>
+        </select>
+        <span>일</span>
+      </fieldset>
+
+      <fieldset>
+        <legend>관심사</legend>
+        <label>
+          <input type="checkbox" name="favorite" value="여행" />
+          <span>여행</span>
+        </label>
+        <label>
+          <input type="checkbox" name="favorite" value="패션" />
+          <span>패션</span>
+        </label>
+        <label>
+          <input type="checkbox" name="favorite" value="음식" />
+          <span>음식</span>
+        </label>
+      </fieldset>
+
+      <button type="button" onclick="submitInfo()">제출 (axios get)</button>
+    </form>
+    <div class="register-result"></div>
+
+    <script>
+      const form = document.forms["information"];
+      const resultBox = document.querySelector(".register-result");
+
+      function submitInfo() {
+        // console.log("click");
+        // GET /axios-practice1이라는 요청을 보낼것이다.
+        console.log(form.favorite.value); // checkbox는 항상 빈 값
+
+        const favValue = [];
+        // form.favorite은 배열형태라서 forEach문을 돌릴 수 있다.
+        form.favorite.forEach((input) => {
+          if (input.checked) favValue.push(input.value);
+        });
+        console.log(favValue);
+
+        const data = {
+          name: form.name.value,
+          gender: form.gender.value,
+          favorite: favValue,
+        };
+
+        axios({
+          method: "get",
+          url: "/axios-practice1",
+          params: data,
+        }).then(function (response) {
+          console.log(response.data);
+          const { name, favorite } = response.data;
+          // ~님 환영합니다. 가입이 완료되었습니다. 취미는 ~
+          resultBox.innerText = `${name}님 환영합니다. 가입이 완료 되었습니다, 취미는 ${favorite}`;
+        });
+      }
+    </script>
+  </body>
+</html>
