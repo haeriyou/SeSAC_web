@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>결과</title>
+    <link rel="stylesheet" href="../static/upload.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1><%=name%>님의 마이페이지</h1>
+      <img src="/<%=src%>" alt="profile image" width="200" />
+      <p>
+        <span>아이디</span>
+        <span><%=userId %></span>
+      </p>
+      <p>
+        <span>비밀번호</span>
+        <span><%=userPw %></span>
+      </p>
+      <p>
+        <span>이름</span>
+        <span><%=name %></span>
+      </p>
+      <p>
+        <span>나이</span>
+        <span><%=age %></span>
+      </p>
+    </div>
+  </body>
+</html>

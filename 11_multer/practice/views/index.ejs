@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습: 파일 업로드</title>
+
+    <style>
+      form label {
+        display: flex;
+      }
+
+      form label span {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      name="fileUpload"
+      action="/register"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <label for="userId">
+        <span>아이디</span>
+        <input type="text" name="userId" id="userId" />
+      </label>
+
+      <label for="userPw">
+        <span>비밀번호</span>
+        <input type="password" name="userPw" id="userPw" />
+      </label>
+
+      <label for="name">
+        <span>이름</span>
+        <input type="text" name="name" id="name" />
+      </label>
+
+      <label for="age">
+        <span>나이</span>
+        <input type="number" name="age" id="age" />
+      </label>
+
+      <label for="profile">
+        <span>프로필 사진</span>
+        <input type="file" name="profileImg" />
+      </label>
+
+      <button type="reset">리셋</button>
+      <button type="submit" onclick="register()">회원가입</button>
+    </form>
+  </body>
+  <!-- <script>
+    function register() {
+      const form = document.forms["fileUpload"];
+      const data = {
+        userId: form.userId.value,
+        userPw: form.userPw.value,
+      };
+      // 유효성 검증
+      if (!form.userId.checkValidity() || !form.userPw.checkValidity()) {
+        alert("아이디와 비밀번호는 필수입니다.");
+        return;
+      }
+    }
+  </script> -->
+</html>
