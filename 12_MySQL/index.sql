@@ -26,6 +26,7 @@ CREATE TABLE PRODUCTS(
     series VARCHAR(30) NOT NULL
 );
 
+
 -- 테이블 목록 확인
 show tables;
 
@@ -129,3 +130,4 @@ SELECT DISTINCT age from user ORDER BY age ASC;
 
 -- order by 먼저, 그 다음 limit (순서가 중요하다)
 SELECT name, address from user WHERE address LIKE '서울%' ORDER BY name asc LIMIT 3;
+
