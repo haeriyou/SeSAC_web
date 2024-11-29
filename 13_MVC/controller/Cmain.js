@@ -1,6 +1,6 @@
 const Comment = require("../model/Comment");
 
-// GET/ (GET 요청)
+// GET / (GET 요청)
 exports.main = (req, res) => {
   res.render("index");
 };
