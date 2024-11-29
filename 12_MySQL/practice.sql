@@ -1,3 +1,4 @@
+-- Active: 1732688614188@@127.0.0.1@3306@sesac1
 -- 실습1
 CREATE DATABASE practice CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 
