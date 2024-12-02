@@ -9,6 +9,10 @@
         display: flex;
       }
 
+      label span {
+        width: 90px;
+      }
+
       .success {
         color: blue;
         font-weight: 700;
@@ -32,14 +36,16 @@
         <span>비밀번호</span>
         <input type="password" name="userPw" id="userPw" required />
       </label>
-      <button type="button" onclick="clickLogin()">로그인</button>
+      <br />
+      <button type="button" onclick="clickLogin()">로그인1</button>
+      <button type="button" onclick="clickLogin2()">로그인2</button>
     </form>
     <div class="login-result"></div>
   </body>
   <script>
+    const loginResult = document.querySelector(".login-result");
     function clickLogin() {
       const form = document.forms["login"];
-      const loginResult = document.querySelector(".login-result");
       const data = {
         userId: form.userId.value,
         userPw: form.userPw.value,
@@ -64,5 +70,6 @@
         }
       });
     }
+    async function clickLogin2() {}
   </script>
 </html>
