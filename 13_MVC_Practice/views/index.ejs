@@ -70,6 +70,30 @@
         }
       });
     }
-    async function clickLogin2() {}
+    async function clickLogin2() {
+      try {
+        const form = document.forms["login"];
+        const data = {
+          userId: form.userId.value,
+          userPw: form.userPw.value,
+        };
+        const response = await axios({
+          method: "post",
+          url: "/login2",
+          data: data,
+        });
+        if (response.data.isSuccess) {
+          loginResult.textContent = `${response.data.userName}님 환영합니다. 로그인 성공!`;
+          loginResult.classList.add("success");
+          loginResult.classList.remove("error");
+        } else {
+          loginResult.textContent = "로그인 실패";
+          loginResult.classList.remove("success");
+          loginResult.classList.add("error");
+        }
+      } catch (err) {
+        console.error("err", err);
+      }
+    }
   </script>
 </html>
