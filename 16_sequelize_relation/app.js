@@ -25,10 +25,3 @@ sequelize
     console.log("db connection err");
     console.log(err);
   });
-
-// sync()
-app;
-
-app.listen(PORT, () => {
-  console.log(`http://localhost:${PORT}`);
-});
