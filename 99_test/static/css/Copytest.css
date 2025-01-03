@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Pretendard-Regular", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.header-full-width {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.index-container-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.index-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.main-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 120px);
+}
+
+.top-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.announcement-box {
+  flex-grow: 1;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.refresh-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.letter-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.warning-box {
+  background-color: #c1e5e8;
+  border: 1px solid #eef3ec;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.input-title,
+.worry-title {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.input-content,
+.reply-content,
+.worry-content {
+  height: 200px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.input-title,
+.worry-title,
+.input-content,
+.worry-content,
+.reply-content {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.submit-button,
+.skip-button,
+.reply-button {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button {
+  background-color: #add5d8;
+}
+
+.skip-button {
+  background-color: #6c757d;
+}
+
+.reply-button {
+  background-color: #add5d8;
+}
+
+.new-worry {
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.worry-title:empty::before,
+.worry-content:empty::before {
+  content: attr(placeholder);
+  color: #999;
+}
+
+.worry-title,
+.worry-content {
+  min-height: 1em;
+}

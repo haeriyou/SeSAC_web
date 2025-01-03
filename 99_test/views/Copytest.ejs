@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>고민풀장</title>
+    <link rel="stylesheet" href="../static/css/Copytest.css" />
+  </head>
+  <body class="full-height">
+    <div class="header-full-width"><%- include('header') %></div>
+    <div class="index-container-wrap">
+      <div class="index-container">
+        <div class="main-container">
+          <div class="top-section">
+            <button class="refresh-button">고민받기</button>
+            <div class="announcement-box">공지사항</div>
+          </div>
+
+          <div class="letter-container">
+            <div class="warning-box">
+              <h3>잠깐!!</h3>
+              <p>보내시기 전 개인 정보가 포함되어 있는 지 확인하셨나요?!</p>
+              <p>개인 정보 발설 시 고민풀장에서 일체의 책임을 지지 않습니다!!</p>
+            </div>
+          
+            <div class="content-area">
+              <input type="text" class="input-title" placeholder="제목을 입력하세요" />
+              <textarea class="input-content" placeholder="내용을 입력하세요"></textarea>
+          
+              <div class="button-container">
+                <button class="submit-button">고민 보내기</button>
+              </div>
+          
+              <!-- 새로운 고민 섹션 -->
+              <div class="new-worry" style="display: none">
+                <h3 class="worry-title" placeholder="고민 제목"></h3>
+                <p class="worry-content" placeholder="고민 내용"></p>
+                
+                <div class="button-container">
+                  <button class="skip-button">건너뛰기</button>
+                </div>
+                
+                <textarea class="reply-content" placeholder="답장을 입력하세요"></textarea>
+          
+                <div class="button-container">
+                  <button class="reply-button">답장 보내기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <script src="../static/Copymain.js"></script>
+  </body>
+</html>
