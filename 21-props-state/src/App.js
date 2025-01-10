@@ -16,8 +16,20 @@ import EventPrac2 from "./components/practice/EventPrac2";
 import EventPrac3 from "./components/practice/EventPrac3";
 import EventPrac4 from "./components/practice/EventPrac4";
 import EventPrac5 from "./components/practice/EventPrac5";
+import EntirePractice from "./components/practice/EntirePractice";
+import PropsMap from "./components/PropsMap";
+import PropsMap2 from "./components/PropsMap2";
+import Alphabet from "./components/Alphabet";
+import MapPrac1 from "./components/practice/MapPrac1";
+import MapPrac2 from "./components/practice/MapPrac2";
 
 function App() {
+  const arr = [
+    { name: "peach", krPrice: 10000, number: 5 },
+    { name: "strawberry", krPrice: 15000, number: 1 },
+    { name: "pear", krPrice: 5000, number: 3 },
+    { name: "apple", krPrice: 10000, number: 15 },
+  ];
   return (
     <div>
       <h2>Props 사용</h2>
@@ -64,6 +76,19 @@ function App() {
       <EventPrac3 />
       <EventPrac4 />
       <EventPrac5 />
+
+      <h2>실습 문제</h2>
+      <EntirePractice />
+
+      <h2>map 사용</h2>
+      <PropsMap arr={arr} />
+      <PropsMap2 arr={arr} />
+      <PropsMap2 />
+      <Alphabet />
+
+      <h2>map 실습</h2>
+      <MapPrac1 />
+      <MapPrac2 />
     </div>
   );
 }
