@@ -10,11 +10,13 @@ export default function Result(props) {
           backgroundColor: background,
           color: color,
           width: "100px",
-          height: "50px",
+          height: "30px",
           textAlign: "center",
-          lineHeight: "50px",
+          lineHeight: "30px",
         }}
-      ></p>
+      >
+        {content}
+      </p>
     </div>
   );
 }

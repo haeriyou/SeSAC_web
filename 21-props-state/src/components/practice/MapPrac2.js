@@ -1,4 +1,4 @@
-import { use, useState } from "react";
+import { useState } from "react";
 
 export default function MapPrac2() {
   const [comment, setComment] = useState([
@@ -77,7 +77,9 @@ export default function MapPrac2() {
           }}
         />
         {"  "}
-        <button onClick={addContent}>작성</button>
+        <button type="button" onClick={addContent}>
+          작성
+        </button>
       </form>
       {/* 검색 폼 */}
       <form>

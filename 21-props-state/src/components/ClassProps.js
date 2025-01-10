@@ -38,6 +38,6 @@ class ClassProps2 extends Component {
   }
 }
 
-ClassProps2.defaultProps = {};
+ClassProps2.defaultProps = { fontColor: "beige" };
 
 export { ClassProps, ClassProps2 }; // 여러개를 내보낼때는 객체 형태로 보내야 한다.
